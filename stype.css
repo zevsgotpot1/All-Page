@@ -1,0 +1,265 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body {
+    max-width: 1200px;
+    /* กำหนดความกว้างไม่ให้เกินไปมากกว่านี้*/
+    background: lightblue;
+    margin: auto;
+    /* ปรับตามขนาดหน้าจอไปเรื่อยๆ */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    /*margin ของ top and bottom*/
+    display: flex;
+}
+
+.current {
+    background-color: violet;
+}
+
+/* ---------------------- */
+
+/* header */
+header {
+    background: #87cfeba8;
+    color: whitesmoke;
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px solid salmon;
+}
+
+header .container {
+    justify-content: space-between;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: flex-end;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: inherit;
+}
+
+header a:hover {
+    color: slateblue;
+    font-weight: bold;
+}
+
+header .branding span {
+    color: deeppink;
+}
+
+/* ---------------------- */
+
+/* Showcase */
+.showcase {
+    min-height: 400px;
+    background: url('https://picsum.photos/id/2/1500/500/?blur=4') no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.showcase .container {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.showcase h1 {
+    font-size: 55px;
+  }
+  
+.showcase p {
+    font-size: 20px;
+    color: deeppink;
+    width: 80%;
+  }
+
+/* Newsletter */
+.newsletter {
+    padding: 15px;
+    background: lightskyblue;
+    color: coral;
+  }
+
+.newsletter .container {
+    justify-content: space-between;
+  }
+
+.newsletter input[type='email'] {
+    width: 250px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+  }
+
+.newsletter button {
+    height: 30px;
+    background-color: coral;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 0 15px;
+  }
+
+/* box */
+.boxes {
+    margin-top: 20px;
+  }
+  
+.boxes .container {
+    justify-content: space-between;
+  }
+  
+.boxes img {
+    height: 120px;
+  }
+  
+.boxes .box {
+    text-align: center;
+    padding: 12px;
+  }
+
+/* footer */
+footer {
+    min-height: 60px;
+    color: whitesmoke;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* responsive */
+@media (max-width: 900px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    /* header {
+      position: static;
+    } */
+    header .container,
+    .newsletter .container {
+      flex-flow: column;
+      align-items: center;
+    }
+    header ul {
+      justify-content: center;
+    }
+  
+    .showcase h1 {
+      font-size: 44px;
+    }
+    .showcase p {
+      font-size: 16px;
+    }
+    .newsletter form {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+    .newsletter form > * {
+      width: 100%;
+      margin: 10px auto;
+    }
+    .boxes .container {
+      flex-flow: column;
+    }
+    /* About US */
+    .main .container {
+      flex-flow: column;
+    }
+    article.main-col {
+      padding: 10px;
+    }
+  }
+
+@media (max-width: 555px) {
+    header ul {
+      flex-flow: column;
+    }
+    header li {
+      text-align: center;
+      border-bottom: 1px solid lime;
+    }
+    .newsletter form {
+      width: 80%;
+    }
+    .newsletter input[type='email'] {
+      width: 100%;
+    }
+  }
+
+/* About US, Services */
+.main {
+    font-size: 18px;
+    /* min-height: 70vh; */
+    min-height: calc(100vh - 220px);
+  }
+  
+  .main .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  article.main-col {
+    margin-top: 10px;
+    padding: 1.5rem;
+    flex: 1 0 70%;
+  }
+  
+  aside.sidebar {
+    background-color: violet;
+    padding: 15px;
+    color: white;
+    margin-top: 35px;
+    border-radius: 4px;
+  }
+  
+  footer {
+    min-height: 60px;
+    color: whitesmoke;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
